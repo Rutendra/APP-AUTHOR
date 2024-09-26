@@ -3,13 +3,15 @@
   padding: 2rem;
   background-color: #f9f9f9;
   text-align: center;
-  /* margin-top: 8rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Heading Styles */
 .about-section h1 {
   font-size: 2.5rem;
-  /* color: #333; */
   text-transform: uppercase;
   color: #f69904;
 }
@@ -33,7 +35,7 @@
 
 /* Individual Stat Item */
 .stat-item {
-  font-size: 3rem; /* Increased font size for better visibility */
+  font-size: 3rem;
   color: #333;
   background-color: #f39c12;
   padding: 20px;
@@ -54,7 +56,7 @@
 
 /* Plus Sign */
 .plus {
-  color: rgb(151, 11, 11); /* Red color for the + sign */
+  color: rgb(151, 11, 11);
 }
 
 /* Stat Text */
@@ -72,13 +74,14 @@
 .reasons {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
 }
 
 /* Individual Reason Item */
 .reason-item {
-  width: 11rem; /* Adjust width as needed */
-  height: 11rem; /* Adjust height as needed */
+  width: 11rem; 
+  height: 11rem; 
   border: 2px solid #f39c12;
   background-color: #fad291;
   margin-top: 4rem;
@@ -89,50 +92,51 @@
   font-size: 1rem;
   color: #333;
   transition: transform 0.3s ease;
-  transform: translateY(0); /* Ensure it's in the right position */
-  opacity: 1; /* Make sure it's visible */
+  transform: translateY(0);
+  opacity: 1;
 }
-.reason-item p{
+
+.reason-item p {
   font-size: 1.2rem;
   font-weight: 700;
 }
-.reason-item:hover{
-  /* scale: 1.1; */
-  animation:normal 0.5s forwards; /* Animation retains visibility */
+
+.reason-item:hover {
+  animation: normal 0.5s forwards;
 }
 
 /* Animation for Reason Item */
 .animate {
-  animation: fadeIn 0.5s forwards; /* Animation retains visibility */
+  animation: fadeIn 0.5s forwards;
 }
 
 /* Fall Animation */
 .fall {
-  animation: fall 0.5s forwards; /* Fall animation keeps items visible */
+  animation: fall 0.5s forwards;
 }
 
 /* Fade-in Animation */
 @keyframes fadeIn {
   0% {
-    transform: translateY(0); /* No initial offset */
+    transform: translateY(0);
   }
   100% {
-    transform: translateY(0); /* End position */
+    transform: translateY(0);
   }
 }
 
 /* Fall Animation */
 @keyframes fall {
   0% {
-    opacity: 0; /* Start as invisible */
-    transform: translateY(-100%); /* Start from above */
+    opacity: 0;
+    transform: translateY(-100%);
   }
   50% {
-    opacity: 1; /* Make it visible halfway */
-    transform: translateY(20px); /* Drop down */
+    opacity: 1;
+    transform: translateY(20px);
   }
   100% {
-    transform: translateY(0); /* End position */
+    transform: translateY(0);
   }
 }
 
@@ -145,13 +149,111 @@
 .stat-item:hover {
   transform: scale(1.05);
 }
-.stat-text{
+
+.stat-text {
   font-size: 1.3rem;
   color: #555;
   font-weight: 800;
 }
-.para{
+
+.para {
   font-size: 1rem;
   width: 90%;
   margin-left: 5%;
+}
+
+/* Responsive Styles */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 1rem;
+  }
+
+  .about-section h1 {
+    font-size: 2rem; /* Decrease font size */
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem; /* Decrease font size */
+  }
+  .stats-container{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 15vw; */
+  }
+  .reasons{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stat-item {
+    font-size: 2.5rem; /* Smaller font size */
+    height: 8rem; /* Decrease height */
+    width: 8rem; /* Decrease width */
+  }
+
+  .count {
+    font-size: 3rem; /* Smaller font size */
+  }
+
+  .reason-item {
+    width: 9rem; /* Decrease width */
+    height: 9rem; /* Decrease height */
+    font-size: 0.9rem; /* Smaller font size */
+  }
+
+  .para {
+    font-size: 0.9rem; /* Smaller font size */
+    margin-left: 0; /* Remove margin */
+  }
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .about-section h1 {
+    font-size: 2.2rem; /* Slightly decrease font size */
+  }
+
+  .about-section h2 {
+    font-size: 1.8rem; /* Slightly decrease font size */
+  }
+  
+  .stat-item {
+    font-size: 2.8rem; /* Smaller font size */
+  }
+
+  .reason-item {
+    width: 10rem; /* Decrease width */
+    height: 10rem; /* Decrease height */
+  }
+
+  .para {
+    font-size: 1rem; /* Adjust para font size */
+  }
+}
+@media (max-width: 370px){
+  .stats-container{
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+  }
+  .reasons{
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+    grid-gap: 0rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+  }
+  
 }

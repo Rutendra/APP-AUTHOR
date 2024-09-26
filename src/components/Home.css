@@ -1,124 +1,114 @@
 /* Container for the home page */
 .home-container {
-    display: flex;
-    margin-top: 2rem;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    position: relative;
-    background-color: #fff7e6;
-    /* width: 100vw; */
-    overflow: hidden;
-  }
-  
-  /* Sunflower common styles */
-  .sunflower {
-    width: 200px;
-    height: 200px;
-    background-image: url('../photos/sun2.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  background-color: #fff7e6;
+  overflow: hidden;
+}
+
+/* Sunflower common styles */
+.sunflower {
+  width: 200px;
+  height: 200px;
+  background-image: url('../photos/sun2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  opacity: 0;
+  animation: popUp 2s ease-in-out forwards;
+}
+
+/* Positioning the sunflowers */
+.sunflower-1 {
+  top: 10%;
+  height: 300px;
+  width: 300px;
+  left: -10%;
+  animation-delay: 0.5s;
+}
+
+.sunflower-2 {
+  top: 50%;
+  right: -5%;
+  animation-delay: 1s;
+  height: 300px;
+  width: 300px;
+}
+
+/* Animation for sunflower pop-up */
+@keyframes popUp {
+  0% {
+    transform: scale(0);
     opacity: 0;
-    animation: popUp 2s ease-in-out forwards;
   }
-  /* .sunflower:hover{
-    rotate: 25deg;
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
-   */
-  /* Positioning the sunflowers */
-  .sunflower-1 {
-    top: 10%;
-    height: 300px;
-    width: 300px;
-    left: -10%;
-    animation-delay: 0.5s;
-    /* transition: transform 0.3s ease; */
+}
+
+/* Welcome text styling */
+.welcome-text {
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.welcome-text h1 {
+  font-size: 4rem;
+  color: #f0a715;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
+}
+
+.welcome-text p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Fade-in animation for text */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  /* .sunflower-1:hover {
-    transform: rotate(25deg); /* Rotate the sunflower by 25 degrees on hover */
-  /* } * */
-  
-  .sunflower-2 {
-    top: 50%;
-    right: -5%;
-    animation-delay: 1s;
-    height: 300px;
-    width: 300px;
-    overflow: hidden;
+  100% {
+    opacity: 1;
   }
-  
-  /* Animation for sunflower pop-up */
-  @keyframes popUp {
-    0% {
-      transform: scale(0);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
-  /* Welcome text styling */
-  .welcome-text {
-    text-align: center;
-    animation: fadeIn 2s ease-in-out;
-  }
-  
-  .welcome-text h1 {
-    font-size: 4rem;
-    color: #f0a715;
-    text-transform: uppercase;
-    margin: 0;
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-  }
-  
-  .welcome-text p {
-    font-size: 1.2rem;
-    color: #555;
-  }
-  
-  /* Fade-in animation for text */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  .getInTouchLink {
-    padding: 1rem .6rem;
-    border-radius: 50px;
-    color: #333; /* Default text color */
-    width: 8rem;
-    background-color: #f0a715;
-    margin-top: 1rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-    transition: color 0.3s ease, transform 0.2s ease; /* Add transform transition */
+}
+
+.getInTouchLink {
+  padding: 1rem .6rem;
+  border-radius: 50px;
+  color: #333; /* Default text color */
+  width: 8rem;
+  background-color: #f0a715;
+  margin-top: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease; /* Add transform transition */
 }
 
 .getInTouchLink:hover {
-    color: #821131; /* Change text color on hover */
-    border: 2px solid #821131; /* Add border on hover */
-    transform: scale(1.05); /* Slightly scale up on hover */
+  color: #821131; /* Change text color on hover */
+  border: 2px solid #821131; /* Add border on hover */
+  transform: scale(1.05); /* Slightly scale up on hover */
 }
 
 .getInTouchLink:active {
-    transform: scale(0.95); /* Slightly scale down when clicked */
-    background-color: #d18a14; /* Change background color on click */
+  transform: scale(0.95); /* Slightly scale down when clicked */
+  background-color: #d18a14; /* Change background color on click */
 }
 
-.aa{
+.aa {
   color: #821131;
   text-transform: uppercase;
   font-size: 3rem;
@@ -126,11 +116,13 @@
   margin-bottom: 0;
   font-family: "Monoton", sans-serif;
 }
-.home-para{
+
+.home-para {
   font-family: "Caveat", cursive;
   font-size: 1.2rem;
   cursor: pointer;
 }
+
 .element {
   animation: initialAnimation 2s ease-out forwards, rotate 8s linear infinite 2s; /* Two animations, rotate starts after 2s */
 }
@@ -154,5 +146,80 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* Responsive Styles */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .welcome-text h1 {
+    font-size: 2.5rem; /* Decrease font size */
+  }
+
+  .welcome-text p {
+    font-size: 1rem; /* Decrease font size */
+  }
+
+  .getInTouchLink {
+    width: 6rem; /* Decrease button width */
+    padding: 0.8rem 0.5rem; /* Adjust padding */
+  }
+
+  .aa {
+    font-size: 2rem; /* Decrease font size */
+  }
+
+  .home-para {
+    font-size: 1rem; /* Decrease font size */
+  }
+
+  .sunflower {
+    width: 150px; /* Decrease size of sunflowers */
+    height: 150px;
+  }
+
+  .sunflower-1,
+  .sunflower-2 {
+    height: 200px; /* Decrease height of positioning */
+    width: 200px; /* Decrease width of positioning */
+  }
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .welcome-text h1 {
+    font-size: 3rem; /* Slightly decrease font size */
+  }
+
+  .welcome-text p {
+    font-size: 1.1rem; /* Slightly decrease font size */
+  }
+
+  .getInTouchLink {
+    width: 7rem; /* Decrease button width */
+    padding: 0.9rem 0.5rem; /* Adjust padding */
+  }
+
+  .aa {
+    font-size: 2.5rem; /* Decrease font size */
+  }
+
+  .home-para {
+    font-size: 1.1rem; /* Decrease font size */
+  }
+
+  .sunflower {
+    width: 180px; /* Decrease size of sunflowers */
+    height: 180px;
+  }
+}
+@media (max-width: 370px){
+  .sunflower-2{
+    top: 70%;
+  }
+  .sunflower-1{
+    top: 3%;
+    left: -17%;
   }
 }

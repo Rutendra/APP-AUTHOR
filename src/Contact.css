@@ -1,31 +1,39 @@
-.page3{
+.page3 {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 2rem 0;
 }
-.p3Box{
-    /* background-color: #3C0753; */
-    background-color: #FABC3F;
+
+.p3Box {
+    background-color: #FABC3F; /* Bright background color */
     padding: 4.6rem 2.5rem;
     width: 85%;
+    max-width: 1200px; /* Limit max width for larger screens */
     border-radius: 25px;
     background-image: url('./photos/mike.png');
-    background-size: 25rem;
+    background-size: 25rem; /* Background image size */
     background-repeat: no-repeat;
     background-position: right;
+    position: relative; /* For potential overlay or additional effects */
 }
-.contactHeading{
+
+.contactHeading {
     width: 60%;
     font-size: 2.4rem;
     color: white;
     text-transform: capitalize;
+    margin-bottom: 1rem; /* Space below heading */
 }
-.conatctDesc{
+
+.conatctDesc {
     width: 60%;
     color: black;
+    font-size: 1.2rem; /* Adjust font size for readability */
+    line-height: 1.5; /* Increase line height for better spacing */
 }
-.getInTouchLink2{
+
+.getInTouchLink2 {
     padding: 1rem .6rem;
     border-radius: 50px;
     color: white;
@@ -36,25 +44,55 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.gmail{
-    color: white;
+    transition: background-color 0.3s ease; /* Smooth background transition */
 }
 
+.getInTouchLink2:hover {
+    background-color: #a61a31; /* Darker shade on hover */
+}
 
-.rutu{
+.gmail {
+    color: white; /* Gmail text color */
+}
+
+.rutu {
     display: flex;
     justify-content: space-between;
     width: 90%;
     padding: 1rem 0;
+    align-items: center; /* Center items vertically */
 }
-.heart{
-    color: red;
+
+.heart {
+    color: red; /* Heart color */
 }
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 768px) {
+    .contactHeading {
+        width: 80%; /* Wider on smaller screens */
+        font-size: 2rem; /* Reduce font size */
+    }
+
+    .conatctDesc {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+
+    .p3Box {
+        padding: 3rem 1.5rem; /* Adjust padding for smaller screens */
+    }
+}
+
 @media only screen and (max-width: 480px) {
-    .rutu{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
+    .rutu {
+        width: 100%; /* Full width for very small screens */
+    }
+
+    .contactHeading {
+        font-size: 1.8rem; /* Further reduce font size */
+    }
+
+    .conatctDesc {
+        font-size: 1rem; /* Reduce description font size */
     }
 }

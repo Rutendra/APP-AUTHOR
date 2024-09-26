@@ -11,26 +11,28 @@
   margin-bottom: 2rem;
 }
 
+/* Price Cards Container */
 .price-cards {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap; /* Allow wrapping of cards */
   position: relative;
 }
 
+/* Individual Price Card */
 .price-card {
-  /*  */
-  width: 100%;
   background-color: transparent;
   border: 2px solid #f39c12; /* Border color matching the theme */
   border-radius: 10px;
   padding: 2rem;
-  width: 300px;
+  width: 300px; /* Default width */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative; /* Needed for background text */
 }
 
+/* Card Heading */
 .price-card h2 {
   font-size: 1.5rem;
   color: #f39c12; /* Heading color */
@@ -38,6 +40,7 @@
   z-index: 2;
 }
 
+/* Price Text */
 .price {
   font-size: 2rem;
   color: #C7253E;
@@ -46,6 +49,7 @@
   z-index: 2;
 }
 
+/* List inside Price Card */
 .price-card ul {
   list-style-type: none;
   z-index: 2;
@@ -68,7 +72,6 @@
 .bg {
   position: absolute;
   top: 45%;
-  margin: 0;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 23rem; /* Adjust the size as needed */
@@ -77,9 +80,23 @@
   z-index: 1; /* Behind the card content */
   pointer-events: none; /* Prevent interaction */
 }
-.ul{
+
+/* List Style Adjustment */
+.ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .price-card {
+      width: 90%; /* Full width on small screens */
+      max-width: 300px; /* Limit maximum width */
+  }
+  
+  .call-service-section h1 {
+      font-size: 2rem; /* Adjust heading size for mobile */
+  }
 }

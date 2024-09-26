@@ -1,64 +1,123 @@
 /* Navbar Container */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.5rem;
-    background-color:#f0a715;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    width: 100%;
-  }
-  
-  /* Logo Styling */
-  .logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .logo:hover {
-    color: #821131;
-    transform: scale(1.1);
-  }
-  
-  /* Navigation List */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #f0a715;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  color: #821131;
+  transform: scale(1.1);
+}
+
+/* Navigation List */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin-right: 2.4rem;
+}
+
+/* Individual Navigation Items */
+.nav-item {
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #C7253E;
+}
+
+/* Hover Underline Effect */
+.nav-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: #C7253E;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* Responsive Styles */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
   .nav-list {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    margin-right: 2.4rem;
+      flex-direction: row; /* Stack items vertically */
+      background-color: #f0a715; /* Add background to dropdown */
+      /* position: absolute; */
+      /* top: 100%; /* Position below navbar */
+      /* left: 0;
+      right: 0; */
+      /* display: none; Initially hidden */
+      /* padding: 1rem; Add some padding */
+      z-index: 999; /* Ensure it's above other elements */
   }
-  
-  /* Individual Navigation Items */
+
+  .nav-list.active {
+      display: flex; /* Show when active */
+  }
+
   .nav-item {
-    font-size: 1.2rem;
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-    transition: color 0.3s ease;
+      font-size: 1rem; /* Increase font size for better visibility */
+      padding: 0.5rem 0; /* Add padding for touch targets */
   }
-  
-  .nav-item:hover {
-    color: #C7253E;
+
+  .hamburger {
+      display: flex; /* Show hamburger menu */
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto; /* Align to the right */
   }
-  
-  /* Hover Underline Effect */
-  .nav-item::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 3px;
-    background-color: #C7253E;
-    bottom: -5px;
-    left: 0;
-    transition: width 0.3s ease-in-out;
+
+  .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff; /* Hamburger lines color */
+      margin: 4px 0; /* Space between lines */
+      transition: all 0.3s ease; /* Smooth transition */
   }
-  
-  .nav-item:hover::after {
-    width: 100%;
+}
+
+/* Show hamburger menu on larger screens */
+@media (min-width: 769px) {
+  .hamburger {
+      display: none; /* Hide hamburger on larger screens */
   }
+}
+
+
+@media (max-width: 390px){
+  .nav-item{
+    font-size: .8rem;
+
+  }
+  .nav-list{
+    gap: 1rem;
+  }
+}

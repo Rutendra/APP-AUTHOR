@@ -1,0 +1,157 @@
+/* About Section Styling */
+.about-section {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  /* margin-top: 8rem; */
+}
+
+/* Heading Styles */
+.about-section h1 {
+  font-size: 2.5rem;
+  /* color: #333; */
+  text-transform: uppercase;
+  color: #f69904;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  color: #f4a930;
+  margin: 1.5rem 0;
+}
+
+/* Stats Section */
+.stats {
+  margin: 2rem 0;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Individual Stat Item */
+.stat-item {
+  font-size: 3rem; /* Increased font size for better visibility */
+  color: #333;
+  background-color: #f39c12;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  position: relative;
+  height: 10rem;
+  width: 10rem;
+  cursor: pointer;
+}
+
+/* Count Text */
+.count {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+/* Plus Sign */
+.plus {
+  color: rgb(151, 11, 11); /* Red color for the + sign */
+}
+
+/* Stat Text */
+.stat-text {
+  margin-top: 10px;
+  color: #fff;
+}
+
+/* Choose Us Section */
+.choose-us {
+  margin: 2rem 0;
+}
+
+/* Reasons Section */
+.reasons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Individual Reason Item */
+.reason-item {
+  width: 11rem; /* Adjust width as needed */
+  height: 11rem; /* Adjust height as needed */
+  border: 2px solid #f39c12;
+  background-color: #fad291;
+  margin-top: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #333;
+  transition: transform 0.3s ease;
+  transform: translateY(0); /* Ensure it's in the right position */
+  opacity: 1; /* Make sure it's visible */
+}
+.reason-item p{
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.reason-item:hover{
+  /* scale: 1.1; */
+  animation:normal 0.5s forwards; /* Animation retains visibility */
+}
+
+/* Animation for Reason Item */
+.animate {
+  animation: fadeIn 0.5s forwards; /* Animation retains visibility */
+}
+
+/* Fall Animation */
+.fall {
+  animation: fall 0.5s forwards; /* Fall animation keeps items visible */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    transform: translateY(0); /* No initial offset */
+  }
+  100% {
+    transform: translateY(0); /* End position */
+  }
+}
+
+/* Fall Animation */
+@keyframes fall {
+  0% {
+    opacity: 0; /* Start as invisible */
+    transform: translateY(-100%); /* Start from above */
+  }
+  50% {
+    opacity: 1; /* Make it visible halfway */
+    transform: translateY(20px); /* Drop down */
+  }
+  100% {
+    transform: translateY(0); /* End position */
+  }
+}
+
+/* Hover Effect for Reason Item */
+.reason-item:hover {
+  transform: scale(1.1);
+}
+
+/* Hover Effect for Stat Item */
+.stat-item:hover {
+  transform: scale(1.05);
+}
+.stat-text{
+  font-size: 1.3rem;
+  color: #555;
+  font-weight: 800;
+}
+.para{
+  font-size: 1rem;
+  width: 90%;
+  margin-left: 5%;
+}

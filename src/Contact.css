@@ -1,0 +1,60 @@
+.page3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+.p3Box{
+    /* background-color: #3C0753; */
+    background-color: #FABC3F;
+    padding: 4.6rem 2.5rem;
+    width: 85%;
+    border-radius: 25px;
+    background-image: url('./photos/mike.png');
+    background-size: 25rem;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.contactHeading{
+    width: 60%;
+    font-size: 2.4rem;
+    color: white;
+    text-transform: capitalize;
+}
+.conatctDesc{
+    width: 60%;
+    color: black;
+}
+.getInTouchLink2{
+    padding: 1rem .6rem;
+    border-radius: 50px;
+    color: white;
+    width: 8rem;
+    background-color: #C7253E;
+    margin-top: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gmail{
+    color: white;
+}
+
+
+.rutu{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 1rem 0;
+}
+.heart{
+    color: red;
+}
+@media only screen and (max-width: 480px) {
+    .rutu{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}

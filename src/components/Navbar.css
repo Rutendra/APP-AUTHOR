@@ -1,0 +1,64 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color:#f0a715;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+  }
+  
+  /* Logo Styling */
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .logo:hover {
+    color: #821131;
+    transform: scale(1.1);
+  }
+  
+  /* Navigation List */
+  .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin-right: 2.4rem;
+  }
+  
+  /* Individual Navigation Items */
+  .nav-item {
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    color: #C7253E;
+  }
+  
+  /* Hover Underline Effect */
+  .nav-item::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #C7253E;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-item:hover::after {
+    width: 100%;
+  }
